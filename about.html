@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TaxASAP</title>
+  <title>About TaxASAP</title>
   <style>
     #top-tool-border {
       width: 100%;
@@ -72,6 +72,43 @@
       height: auto;
       display: block;
     }
+
+    .description {
+      text-align: center;
+    }
+    .companies {
+      text-align: center;
+    }
+    .img_comps {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .img_comps img{
+      height: 40px;
+      object-fit: contain;
+    }
+    .why h2{
+      text-align: center;
+      list-style: none;
+    }
+    .reasons{
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .reasons li{
+      list-style: none;
+      justify-content: center;
+    }
+    .reasons li::before {
+      content: "✓";
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -79,5 +116,33 @@
   <div id="logo">
     <img src="mockups/TaxASAP_finale_logo-removebg-preview.png" alt="TaxASAP Logo" width="250" height="max-content">
   </div>
+  
+ <div class="description">
+ <h1>Our Story</h1>
+ <p>At TaxASAP, we know how painful it is to file your own tax in Canada, and we are here to make filing taxes faster and easier for you. It is an application that centers customers' needs and integrates expert insights. If you're looking for an affordable tax filing app that makes your life easier, TaxASAP is the best choice for you! </p>
+ </div>
+ 
+ <div class="companies">
+ <h2>Companies That Work with Us</h2>
+ <div class = "img_comps">
+ <img src="nokia-3.svg" alt="nokia_logo">
+ <img src="ottawa-citizen-2.svg" alt="ottawa-citizen_logo">
+ <img src="shopify-2.svg" alt="shopify_logo">
+ <img src="uottawa.svg" alt="uottawa_logo">
+ </div>
+ </div>
+ 
+ <div class="why">
+ <h2>Why Choose Us?</h2>
+ <div class="reasons">
+ <ul>
+ <li>Quick & Easy</li>
+ <li>Affordable Plans</li>
+ <li>Personalized Experience</li>
+ <li>Experts with Years of Experience</li>
+ </ul>
+ </div>
+ </div>
 
-
+</body>
+</html>
