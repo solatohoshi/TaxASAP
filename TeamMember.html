@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - TaxASAP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f7;
+        }
+
+        nav {
+            background: rgb(120, 0, 112);
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+        }
+
+        .carousel {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .member img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 20px rgba(120, 0, 112, 0.4);
+        }
+
+        .member h2 {
+            margin: 20px 0 5px;
+            color: #1d1d1f;
+        }
+
+        .member .role {
+            color: rgb(120, 0, 112);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .member .info {
+            background: rgb(120, 0, 112);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .member:hover .info {
+            display: block;
+        }
+
+        .arrows {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        button {
+            background: rgb(120, 0, 112);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: rgb(150, 0, 140);
+        }
+
+        footer {
+            background: rgb(120, 0, 112);
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="carousel">
+            <div id="member" class="member"></div>
+            <div class="arrows">
+                <button onclick="previousMember()">←</button>
+                <button onclick="nextMember()">→</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>About TaxASAP</h3>
+                <p>An app that makes filing taxes faster and easier.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Our Services</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Pricing</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">About Us</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Careers</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="mailto:cpoit044@uottawa.ca">cpoit044@uottawa.ca</a></li>
+                    <li><a href="tel:+6135625700">+1 (613) 562 5700</a></li>
+                    <li><a href="https://github.com/Groupe19/TaxASAP" target="_blank">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var teamMembers = [
+            {
+                name: 'Charles Poitras',
+                role: 'Frontend Developer',
+                img: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1d0efd6f-0130-47a8-8ffd-daf855766e96/d81bvkf-af3536c4-ebc3-4c6a-ad78-63219b2a70f7.png/v1/fill/w_1024,h_1228,strp/mega_rayquaza_by_theangryaron_d81bvkf-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTIyOCIsInBhdGgiOiJcL2ZcLzFkMGVmZDZmLTAxMzAtNDdhOC04ZmZkLWRhZjg1NTc2NmU5NlwvZDgxYnZrZi1hZjM1MzZjNC1lYmMzLTRjNmEtYWQ3OC02MzIxOWIyYTcwZjcucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.FWSo5Gi3t32adw1dY0NQU3zp1y3YeN3BjiUtzpL9itM',
+                link: 'https://github.com/Chiababa',
+                info: 'Proficient in HTML, CSS, and Java and python oh and C++'
+            },
+            {
+                name: 'Sara Khan',
+                role: 'Frontend Developer',
+                img: 'https://tse4.mm.bing.net/th/id/OIP._jLtrtaFsVUswb_WvidtIgHaH3?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3',
+                link: 'https://github.com/SaraKn0',
+                info: 'The other quiet lady'
+            },
+            {
+                name: 'Loik Bernatchez',
+                role: 'Full Stack Developer',
+                img: 'https://th.bing.com/th/id/R.eda5531538101e2e5e3babbd75f811eb?rik=m857wQaMnapABw&riu=http%3a%2f%2forig08.deviantart.net%2f4dfb%2ff%2f2014%2f090%2f6%2f1%2fpikachu___01_by_mighty355-d7cdjy7.png&ehk=%2byUUP8C5NCRSYi0hJ3Lq2HpzY3uaqw2AKbH0JyCGFik%3d&risl=&pid=ImgRaw&r=0',
+                link: 'https://github.com/loik-b',
+                info: 'The other french'
+            },
+            {
+                name: 'Nada Dahbour',
+                role: 'Full Stack Developer',
+                img: 'https://th.bing.com/th/id/R.9dbae2f39d0e90eb84865731a76c78b8?rik=mTt5KL79k48uAA&riu=http%3a%2f%2fimg3.wikia.nocookie.net%2f__cb20131024133236%2fpokemon-quest%2fimages%2fe%2fee%2fMeloetta.png&ehk=SKJdD5plLsD5yv6e8TLfrTrjJBn2yKaDVc%2bOEFLRQNs%3d&risl=&pid=ImgRaw&r=0',
+                link: 'https://github.com/NadaDahbour',
+                info: 'The initiator'
+            },
+            {
+                name: 'Huiting Huang',
+                role: 'Full Stack Developer',
+                img: 'https://img.pokemondb.net/artwork/vector/large/rattata.png',
+                link: 'https://github.com/solatohoshi',
+                info: 'A quiet lady'
+            },
+            {
+                name: 'Josh Barnabas',
+                role: 'Full Stack Developer',
+                img: 'https://th.bing.com/th/id/R.13f4b5dd90c0b1c05ae2de476514c9f1?rik=0VFG49vSRe1AjQ&riu=http%3a%2f%2fimg2.wikia.nocookie.net%2f__cb20130815193824%2fes.pokemon%2fimages%2f4%2f45%2fVictini.png&ehk=Vjzp%2bKxbp%2fOo9MBJQmUnI3okDuoRaNTo7xIvoiiiCys%3d&risl=&pid=ImgRaw&r=0',
+                link: 'https://github.com/member6',
+                info: 'JUst a random folk'
+            }
+        ];
+
+        var currentIndex = 0;
+
+        function displayMember() {
+            var member = teamMembers[currentIndex];
+            var memberDiv = document.getElementById('member');
+            
+            memberDiv.innerHTML = '<a href="' + member.link + '" target="_blank">' +
+                                  '<img src="' + member.img + '" alt="' + member.name + '">' +
+                                  '</a>' +
+                                  '<h2>' + member.name + '</h2>' +
+                                  '<p class="role">' + member.role + '</p>' +
+                                  '<div class="info"><p>' + member.info + '</p></div>';
+        }
+
+        function previousMember() {
+            currentIndex = currentIndex - 1;
+            if (currentIndex < 0) {
+                currentIndex = teamMembers.length - 1;
+            }
+            displayMember();
+        }
+
+        function nextMember() {
+            currentIndex = currentIndex + 1;
+            if (currentIndex >= teamMembers.length) {
+                currentIndex = 0;
+            }
+            displayMember();
+        }
+
+        displayMember();
+    </script>
+</body>
+</html>
