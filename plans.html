@@ -1,82 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-body {
-  margin: 0;
-  padding: 20;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px; 
+      font-family: Arial, sans-serif;
+    }
 
-h1 {
-    gap: 10px;
-    text-align: center;
+   
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: white;
+      padding: 10px 40px;
 
-}
+    }
 
-table {
-  width: 80%;
-  margin: 0 auto;   
-  text-align: center;
-  border-collapse: collapse;
-}
+    .logo {
+      position: absolute;     
+      top: 10px;              
+      left: 30px;             
+    }
 
-th, td {
-  padding: 10px;
-}
+    .logo img {
+      width: 200px;           
+      height: auto;           
+    }
 
-th {
-  background-color: #f2f2f2;
-}
-</style>
+    .navbar .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      
+    }
+
+    .navbar .nav-links a {
+      color: #333;
+      font-weight: 500;
+      text-decoration: none;
+      
+    }
+
+    .navbar .get-started {
+      background-color: #496f9a;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+
+    h1 {
+      text-align: center;
+      margin-top: 75px;
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      text-align: center;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .pricing-section {
+      text-align: center;
+      margin-top: 120px;
+    }
+
+    .pricing-section h1 {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .pricing-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 230px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .plan-title {
+      font-weight: bold;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .plan-price {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .getstart-btn {
+      margin-top: 20px;
+      padding: 8px 15px;
+      border: none;
+      background-color: #496f9a;
+      color: white;
+      border-radius: 6px;
+      
+    }
+
+    
+  </style>
 </head>
 <body>
 
+  <nav class = "navbar">
+    <div class="logo">
+      <img src="mockups/TaxASAP finale logo.png" alt="TaxASAP Logo">
+    </div>
 
-<h1>
-<img src="mockups/TaxASAP finale logo.png" width = "300" height="200">
-</h1>
+    <div class ="nav-links">
+      <a href = "--">Plans</a>
+      <a href = "--">About</a>
+      <a href = "--">Team</a>
+      <button class="get-started">Get Started</button>
+    </div>
+  </nav>
 
-<h1>Pricing</h1>
-<table>
-  <tr>
-    <th>Services</th>
-    <th>Student</th>
-    <th>Individual</th>
-    <th>Business</th>
-    <th>Family</th>
-  </tr>
-  <tr>
-    <td> </td>
-    <td>$</td>
-    <td>$$$</td>
-    <td>$$</td>
-    <td>$$$</td>
-  </tr>
-    <tr>
-      <td>Service 1</td>
-      <td>✔️</td>
-      <td>✔️</td>
-      <td>❌</td>
-      <td>❌</td>
-    </tr>
-    <tr>
-      <td>Service 2</td>
-      <td>✔️</td>
-      <td>✔️</td>
-      <td>✔️</td>
-      <td>✔️</td>
-    </tr>
-    <tr>
-      <td>Service 3</td>
-      <td>❌</td>
-      <td>✔️</td>
-      <td>❌</td>
-      <td>✔️</td>
-    </tr>
-</table>
+  
+<section class = "pricing-section">
+  <h1>Pricing</h1>
+  <div class="pricing-container">
 
+    <div class="pricing-card">
+      <div class="plan-title">Student</div>
+      <div class="plan-price">$</div>
+      <div class="features">
+        ✔️<br>
+        ✔️<br>
+        ❌<br>
+        ❌
+      </div>
+      <button class="getstart-btn">Get Started</button>
+    </div>
 
+    <div class="pricing-card">
+      <div class="plan-title">Individual</div>
+      <div class="plan-price">$$$</div>
+      <div class="features">
+        ✔️<br>
+        ✔️<br>
+        ❌<br>
+        ✔️
+      </div>
+      <button class="getstart-btn">Get Started</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="plan-title">Business</div>
+      <div class="plan-price">$$</div>
+      <div class="features">
+        ✔️<br>
+        ✔️<br>
+        ❌<br>
+        ❌
+      </div>
+      <button class="getstart-btn">Get Started</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="plan-title">Family</div>
+      <div class="plan-price">$$$</div>
+      <div class="features">
+        ✔️<br>
+        ✔️<br>
+        ✔️<br>
+        ✔️
+      </div>
+      <button class="getstart-btn">Get Started</button>
+    </div>
+
+  </div>
+</section>
 </body>
 </html>
