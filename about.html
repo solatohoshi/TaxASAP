@@ -7,122 +7,60 @@
   <style>
     nav {
       width: 100%;
-      margin: 20;
-      padding: 20;
+      position: fixed; top:0px;
+      margin: 0;
+      padding: 0;
       background-color: rgb(98, 116, 176);
       height: 100px;
-      z-index: 0;
+      z-index: 1;
     }
+  
 
     body {
+      position:relative; top:110px;
       margin: 0;
       font-family: 'Times New Roman', Times, serif;
       background-color: #f5deb3;
       overflow: hidden;
-      z-index: 0;
+      z-index: 8;
     }
 
     #logo {
-      position: absolute;
+      position: fixed;
       top: -30px;
       left: 0px;
       z-index: 3;
     }
 
-    .team-button {
-      position: absolute;
-      top: 0%;
-      left: 78%;
-      display: inline-block;
-      padding: 10px;
-      border-radius: 8px;
-      z-index: 4;
-    }
-
-    .team-button:hover {
-      background-color: #20179d;
-    }
-
-    .team-button img {
-      width: 80px;
-      height: auto;
-      vertical-align: top;
-    }
-
-    .costumer-button {
-      position: absolute;
-      top: 0%;
-      left: 92%;
-      display: inline-block;
-      padding: 10px;
-      border-radius: 8px;
-      z-index: 5;
-    }
-
-    .costumer-button:hover {
-      background-color: #20179d;
-    }
-
-    .costumer-button img {
-      width: 80px;
-      height: auto;
-      vertical-align: top;
-    }
-
+  .team-button:hover,
+   .customer-button:hover,
+   .plans-button:hover,
+   .about-button:hover{
+    background-color: #20179d;
+  }
+  .team-button img ,
+  .about-button img, 
+  .plans-button img,
+  .customer-button img {
+    width: auto;
+    height: 80px;
+    vertical-align: top;
+  }
+    .about-button,
+    .customer-button,
+    .team-button,
     .plans-button {
-      position: absolute;
-      top: 0%;
-      left: 85%;
-      display: inline-block;
-      padding: 10px;
-      border-radius: 8px;
-      z-index: 4;
-
-    }
-
-    .plans-button:hover {
-      background-color: #20179d;
-    }
-
-    .plans-button img {
-      width: 80px;
-      height: auto;
-      vertical-align: top;
-    }
-
-    .about-button {
-      position: absolute;
-      top: 0%;
-      left: 70%;
-      display: inline-block;
-      padding: 10px;
-      border-radius: 8px;
-      z-index: 4;
-    }
-
-    .about-button:hover {
-      background-color: #20179d;
-    }
-
-    .about-button img {
-      width: 80px;
-      height: auto;
-      vertical-align: top;
-    }
-
-    .links {
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 20px;
-    }
-
-    .links img {
-      height: 40px;
-      object-fit: contain;
-    }
+   position: fixed; top:0px;  
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+   z-index: 4;  
+  } 
 
     .description {
       align-items: center;
@@ -171,28 +109,32 @@
   </style>
 </head>
 
-<body>
-<div>
+ <toolbar>
   <nav>
-    <img src="main_page_img/TaxASAP_finale_logo-removebg-preview.png" alt="TaxASAP Logo" width="250"
-      height="max-content">
-    <div class="links">
-      <a href="" class="plans-button">Plans
-        <img src="main_page_img/plans-icon.png" alt="see plans offered">
-      </a>
-      <a href="" class="costumer-button">Customer
-        <img src="main_page_img/costumer-icon.png" alt="costumer page">
-      </a>
-      <a href="" class="team-button">Team
-        <img src="main_page_img/team-icon.png" alt="meet the team">
-      </a>
-      <a href="" class="about-button">About
-        <img src="main_page_img/about-icon.png" alt="about us">
-      </a>
-    </div>
   </nav>
+  <div id="logo">
+      <img src="main_page_img/TaxASAP_finale_logo-removebg-preview.png" alt="TaxASAP Logo" width="250" height="max-content">
   </div>
-
+      <div>
+      <a href="" class="plans-button" style="left:85%;">
+      <img src="main_page_img/plans-icon.png" alt="see plans offered">
+      <span>Plans</span>
+      </a>
+      <a href="" class="customer-button" style="left:92%;">
+      <img src="main_page_img/costumer-icon.png" alt="costumer page" height="80px">
+      <span>Customer</span>
+      </a>
+      <a href="" class="team-button"  style="left:78%;">
+      <img src="main_page_img/team-icon.png" alt="meet the team">
+      <span>Team</span>
+      </a>  
+      <a href="" class="about-button"  style="left:70%;">
+      <img src="main_page_img/about-icon.png" alt="about us">
+      <span>About</span>
+      </a>
+      </div>
+</toolbar>
+<body>
   <div class="description">
     <h1>Our Story</h1>
     <p>At TaxASAP, we know how painful it is to file your own tax in Canada, and we are here to make filing taxes faster
