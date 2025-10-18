@@ -22,12 +22,7 @@
         z-index: 0;
     }
 
-    #logo {
-      position: absolute;
-      top : -30px;
-        left: 0px;
-      z-index: 3;
-    }
+   
 
     #slogan {
       position: absolute;
@@ -39,11 +34,17 @@
       z-index: 2;
       
     }
-  .team-button:hover,
+    .logo:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
+    .team-button:hover,
    .customer-button:hover,
    .plans-button:hover,
    .about-button:hover{
-    background-color: #20179d;
+    background-color: #4740a7;
+    transform: scale(1.05);
+      transition: transform 0.3s;
   }
   .team-button img ,
   .about-button img, 
@@ -52,8 +53,10 @@
     width: auto;
     height: 80px;
     vertical-align: top;
+    
   }
     .about-button,
+    .logo,
     .customer-button,
     .team-button,
     .plans-button {
@@ -112,9 +115,9 @@
 <toolbar>
   <nav>
   </nav>
-  <div id="logo">
+  <a href="Home_page.html" class="logo" style="top:-30px; left:0px;">
       <img src="main_page_img/TaxASAP_finale_logo-removebg-preview.png" alt="TaxASAP Logo" width="250" height="max-content">
-  </div>
+  </a>
       <div>
       <a href="plans.html" class="plans-button" style="left:85%;">
       <img src="main_page_img/plans-icon.png" alt="see plans offered">
@@ -150,3 +153,4 @@
 
 </body>
 </html>
+
