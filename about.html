@@ -25,11 +25,9 @@
       z-index: 8;
     }
 
-    #logo {
-      position: fixed;
-      top: -30px;
-      left: 0px;
-      z-index: 3;
+    .logo:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
     }
 
   .team-button:hover,
@@ -48,6 +46,7 @@
   }
     .about-button,
     .customer-button,
+    .logo,
     .team-button,
     .plans-button {
    position: fixed; top:0px;  
@@ -112,11 +111,11 @@
  <toolbar>
   <nav>
   </nav>
-  <div id="logo">
+  <a href="Home_page.html" class="logo" style="top:-30px; left:0px;">
       <img src="main_page_img/TaxASAP_finale_logo-removebg-preview.png" alt="TaxASAP Logo" width="250" height="max-content">
-  </div>
+  </a>
       <div>
-      <a href="" class="plans-button" style="left:85%;">
+      <a href="plans.html" class="plans-button" style="left:85%;">
       <img src="main_page_img/plans-icon.png" alt="see plans offered">
       <span>Plans</span>
       </a>
@@ -124,11 +123,11 @@
       <img src="main_page_img/costumer-icon.png" alt="costumer page" height="80px">
       <span>Customer</span>
       </a>
-      <a href="" class="team-button"  style="left:78%;">
+      <a href="TeamMember.html" class="team-button"  style="left:78%;">
       <img src="main_page_img/team-icon.png" alt="meet the team">
       <span>Team</span>
       </a>  
-      <a href="" class="about-button"  style="left:70%;">
+      <a href="about.html" class="about-button"  style="left:70%;">
       <img src="main_page_img/about-icon.png" alt="about us">
       <span>About</span>
       </a>
