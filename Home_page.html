@@ -39,66 +39,38 @@
       z-index: 2;
       
     }
-    .team-button {
-    position: absolute;
-     top: 0%;
-     left: 78%;
-     display: inline-block;
-     padding: 10px;
-     border-radius: 8px;
-     z-index: 4;
-  }
-   .team-button:hover,
-   .costumer-button:hover,
+  .team-button:hover,
+   .customer-button:hover,
    .plans-button:hover,
    .about-button:hover{
     background-color: #20179d;
   }
-    .team-button img ,
+  .team-button img ,
   .about-button img, 
-  .plans-button img {
+  .plans-button img,
+  .customer-button img {
     width: auto;
     height: 80px;
     vertical-align: top;
   }
-  
-    .costumer-button {
-    position: absolute;
-     top: 0%;
-     left: 92%;
-     display: inline-block;
-     padding: 10px;
-     border-radius: 8px;
-     z-index: 4;
-  }
-  .costumer-button img {
-    width: auto;
-    height: 67px;
-    vertical-align: top;
-  }
-
+    .about-button,
+    .customer-button,
+    .team-button,
     .plans-button {
-    position: absolute;
-     top: 0%;
-     left: 85%;
-     display: inline-block;
-     padding: 10px;
-     border-radius: 8px;
-     z-index: 4;
-
-  }
-
-
-  
-    .about-button {
-    position: absolute;
-     top: 0%;
-     left: 70%;
-     display: inline-block;
-     padding: 10px;
-     border-radius: 8px;
-     z-index: 4;  
+   position: absolute;  
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+   z-index: 4;  
   } 
+  
+  
+  
 
 
     .image-container {
@@ -133,44 +105,35 @@
       height: auto;
       display: block;
     }
-    .links {
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 20px;
-    }
 
-    .links img {
-      height: 40px;
-      object-fit: contain;
-    }
   </style>
 </head>
-
 <body>
+<toolbar>
   <nav>
-
   </nav>
   <div id="logo">
       <img src="main_page_img/TaxASAP_finale_logo-removebg-preview.png" alt="TaxASAP Logo" width="250" height="max-content">
   </div>
       <div>
-      <a href="" class="plans-button">Plans
+      <a href="" class="plans-button" style="left:85%;">
       <img src="main_page_img/plans-icon.png" alt="see plans offered">
+      <span>Plans</span>
       </a>
-      <a href="" class="costumer-button">Customer
+      <a href="" class="customer-button" style="left:92%;">
       <img src="main_page_img/costumer-icon.png" alt="costumer page" height="80px">
+      <span>Customer</span>
       </a>
-      <a href="" class="team-button">Team
+      <a href="" class="team-button"  style="left:78%;">
       <img src="main_page_img/team-icon.png" alt="meet the team">
+      <span>Team</span>
       </a>  
-      <a href="" class="about-button">About
+      <a href="" class="about-button"  style="left:70%;">
       <img src="main_page_img/about-icon.png" alt="about us">
+      <span>About</span>
       </a>
       </div>
-    
+</toolbar>
 
 
   <div id="slogan">
@@ -187,4 +150,3 @@
 
 </body>
 </html>
-
