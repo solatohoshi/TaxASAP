@@ -11,45 +11,51 @@
     }
 
    
-    .navbar {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      background-color: white;
-      padding: 10px 40px;
-
+    nav {
+      width: 100%;
+      position: fixed; top:0px; left:0px;
+      background-color: rgb(98, 116, 176);
+      height: 100px;
+      z-index: 0;
     }
-
-    .logo {
-      position: absolute;     
-      top: 10px;              
-      left: 30px;             
+  
+    .logo:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
     }
-
-    .logo img {
-      width: 200px;           
-      height: auto;           
-    }
-
-    .navbar .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      
-    }
-
-    .navbar .nav-links a {
-      color: #333;
-      font-weight: 500;
-      text-decoration: none;
-      
-    }
-
-    .navbar .get-started {
-      background-color: #496f9a;
-      padding: 10px 20px;
-      border-radius: 8px;
-    }
+    .team-button:hover,
+   .customer-button:hover,
+   .plans-button:hover,
+   .about-button:hover{
+    background-color: #4740a7;
+    transform: scale(1.05);
+      transition: transform 0.3s;
+  }
+  .team-button img ,
+  .about-button img, 
+  .plans-button img,
+  .customer-button img {
+    width: auto;
+    height: 80px;
+    vertical-align: top;
+    
+  }
+    .about-button,
+    .logo,
+    .customer-button,
+    .team-button,
+    .plans-button {
+   position: fixed; top:0px;  
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+   z-index: 4;  
+  } 
 
 
     h1 {
@@ -124,18 +130,31 @@
 </head>
 <body>
 
-  <nav class = "navbar">
-    <div class="logo">
-      <img src="mockups/TaxASAP finale logo.png" alt="TaxASAP Logo">
-    </div>
-
-    <div class ="nav-links">
-      <a href = "--">Plans</a>
-      <a href = "--">About</a>
-      <a href = "--">Team</a>
-      <button class="get-started">Get Started</button>
-    </div>
+  <toolbar>
+  <nav>
   </nav>
+  <a href="Home_page.html" class="logo" style="top:-30px; left:0px;">
+      <img src="main_page_img/TaxASAP_finale_logo-removebg-preview.png" alt="TaxASAP Logo" width="250" height="max-content">
+  </a>
+      <div>
+      <a href="plans.html" class="plans-button" style="left:85%;">
+      <img src="main_page_img/plans-icon.png" alt="see plans offered">
+      <span>Plans</span>
+      </a>
+      <a href="" class="customer-button" style="left:92%;">
+      <img src="main_page_img/costumer-icon.png" alt="costumer page" height="80px">
+      <span>Customer</span>
+      </a>
+      <a href="TeamMember.html" class="team-button"  style="left:78%;">
+      <img src="main_page_img/team-icon.png" alt="meet the team">
+      <span>Team</span>
+      </a>  
+      <a href="about.html" class="about-button"  style="left:70%;">
+      <img src="main_page_img/about-icon.png" alt="about us">
+      <span>About</span>
+      </a>
+      </div>
+</toolbar>
 
   
 <section class = "pricing-section">
