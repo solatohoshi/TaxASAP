@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers Q&A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Customer Q&A Forum</h1>
+
+  <section id="ask">
+    <h2>Ask a Question</h2>
+    <form id="questionForm">
+      <input type="text" id="username" placeholder="Your name" required>
+      <textarea id="question" placeholder="Enter your question..." required></textarea>
+      <button type="submit">Submit Question</button>
+    </form>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      <li><strong>Q:</strong> How do I reset my password?<br><em>A:</em> Click “Forgot password” on the Home page.</li>
+      <li><strong>Q:</strong> Where can I contact support?<br><em>A:</em> Email us at taxasapsupport@gmail.com</li>
+    </ul>
+  </section>
+
+  <section id="questions">
+    <h2>Community Questions</h2>
+    <div id="questionList"></div>
+  </section>
+
+  <script>
+    const form = document.getElementById('questionForm');
+    const questionList = document.getElementById('questionList');
+    let questions = JSON.parse(localStorage.getItem('questions')) || [];
+
+    function renderQuestions() {
+      questionList.innerHTML = '';
+      questions.forEach((q, index) => {
+        const div = document.createElement('div');
+        div.classList.add('question');
+        div.innerHTML = `
+          <p><strong>${q.username}:</strong> ${q.text}</p>
+          <div class="answers">
+            ${q.answers.map(a => `<p><em>${a}</em></p>`).join('')}
+          </div>
+          <input type="text" placeholder="Write an answer..." id="answer-${index}">
+          <button onclick="addAnswer(${index})">Answer</button>
+        `;
+        questionList.appendChild(div);
+      });
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const questionText = document.getElementById('question').value;
+      questions.push({ username, text: questionText, answers: [] });
+      localStorage.setItem('questions', JSON.stringify(questions));
+      form.reset();
+      renderQuestions();
+    });
+
+    function addAnswer(index) {
+      const input = document.getElementById(`answer-${index}`);
+      const answer = input.value;
+      if (answer.trim() === '') return;
+      questions[index].answers.push(answer);
+      localStorage.setItem('questions', JSON.stringify(questions));
+      renderQuestions();
+    }
+
+    renderQuestions();
+  </script>
+</body>
+</html>
