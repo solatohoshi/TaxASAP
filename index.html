@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TaxASAP</title>
+  <style>
+    nav {
+      width: 100%;
+      position: absolute;
+      top : 0;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(98, 116, 176);
+      height: 100px;
+      z-index: 1;
+    }
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #ebebfc;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+   
+
+    #slogan {
+      position: absolute;
+      top:35%;
+        left: 0px;
+        transform: translateY(-40%);
+      font-size: 50px;
+      width: 40%;
+      z-index: 2;
+      
+    }
+    .logo:hover,
+    .get-started-button:hover{
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
+    .team-button:hover,
+   .customer-button:hover,
+   .plans-button:hover,
+   .about-button:hover{
+    background-color: #4740a7;
+    transform: scale(1.05);
+      transition: transform 0.3s;
+  }
+  .team-button img ,
+  .about-button img, 
+  .plans-button img,
+  .customer-button img {
+    width: auto;
+    height: 80px;
+    vertical-align: top;
+    
+  }
+    .about-button,
+    .logo,
+    .customer-button,
+    .team-button,
+    .plans-button {
+   position: absolute;  
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+   z-index: 4;  
+  } 
+  
+  
+  .get-started-button img{
+    width: 400px;
+    height: auto;     
+    z-index: 3;
+  }
+  .get-started-button{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    z-index: 3;
+  }
+
+
+    .image-container {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 600px;
+      overflow: hidden;
+      transform: translateY(-50%);
+      border-radius: 20px;
+        z-index: 1;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+     .image-container2 {
+      position: absolute;
+      top: 60%;
+      right: 20%;
+      width: 420px;
+      overflow: hidden;
+      transform: translateY(-54%);
+      border-radius: 20px;
+        z-index: 4;
+    }
+
+    .image-container2 img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+<toolbar>
+  <nav>
+  </nav>
+  <a href="Home_page.html" class="logo" style="top:-30px; left:0px;">
+      <img src="main_page_img/TaxASAP_finale_logo-removebg-preview.png" alt="TaxASAP Logo" width="250" height="max-content">
+  </a>
+      <div>
+      <a href="plans.html" class="plans-button" style="left:85%;">
+      <img src="main_page_img/plans-icon.png" alt="see plans offered">
+      <span>Plans</span>
+      </a>
+      <a href="" class="customer-button" style="left:92%;">
+      <img src="main_page_img/costumer-icon.png" alt="costumer page" height="80px">
+      <span>Customer</span>
+      </a>
+      <a href="TeamMember.html" class="team-button"  style="left:78%;">
+      <img src="main_page_img/team-icon.png" alt="meet the team">
+      <span>Team</span>
+      </a>  
+      <a href="about.html" class="about-button"  style="left:70%;">
+      <img src="main_page_img/about-icon.png" alt="about us">
+      <span>About</span>
+      </a>
+      </div>
+</toolbar>
+
+
+  <div id="slogan" style="position:fixed; left:10px;">
+    <h1>We Handle the <em>stress</em>, <br>you keep the rest!</h1>
+  </div>
+
+  <div class="image-container">
+    <img src="main_page_img/startup-594090_1920.jpg" alt="background image of people working together on taxes">
+  </div>
+  <div class="image-container2">
+    <img src="main_page_img/image-of-tax.jpg" alt="background image of people working together on taxes">
+</div>
+<a href="plans.html" class="get-started-button">
+      <img src="main_page_img/get_started.png" alt="get started">
+</a>
+
+</body>
+</html>
+
