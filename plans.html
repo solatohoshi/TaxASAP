@@ -3,159 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 20px; 
-      font-family: Arial, sans-serif;
-      background-color: #ebebfc;
-    }
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-   
-    nav {
-      width: 100%;
-      position: fixed; top:0px; left:0px;
-      background-color: rgb(98, 116, 176);
-      height: 100px;
-      z-index: 0;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #0B1C3D;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
   
-    .logo:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s;
-    }
-    .team-button:hover,
-   .customer-button:hover,
-   .plans-button:hover,
-   .about-button:hover{
-    background-color: #4740a7;
-    transform: scale(1.05);
-      transition: transform 0.3s;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0B1C3D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
   }
-  .team-button img ,
-  .about-button img, 
-  .plans-button img,
-  .customer-button img {
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: 150px;
     width: auto;
-    height: 80px;
-    vertical-align: top;
-    
+    margin-right: 6px;
   }
-    .about-button,
-    .logo,
-    .customer-button,
-    .team-button,
-    .plans-button {
-   position: fixed; top:0px;  
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 8px;
-   z-index: 4;  
-  } 
+
+  .nav-right a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 18.4px;
+    margin-left: 45px;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .nav-right a:hover {
+    color: #d08025;
+    transform: scale(1.05);
+  }
+
+  .nav-right .btns {
+    background-color: #d08025;
+    color: #0B1C3D;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+  }
+
+  .nav-right .btns:hover {
+    background-color: #f5f5f5;
+    color: #0B1C3D;
+  }
+
+ 
+  .pricing-section {
+    text-align: center;
+    margin-top: 150px;
+    padding-bottom: 100px;
+    background: linear-gradient(180deg, #0B1C3D 0%, #12244d 100%);
+  }
+
+  .pricing-section {
+  text-align: center;
+  margin-top: 150px;
+  padding-bottom: 100px;
+  background: linear-gradient(180deg, #0B1C3D 0%, #12244d 100%);
+  position: relative;   
+  overflow: hidden;    
+  z-index: 1; 
+}
 
 
-    h1 {
-      text-align: center;
-      margin-top: 75px;
-    }
 
-    table {
-      width: 80%;
-      margin: 20px auto;
-      text-align: center;
-      border-collapse: collapse;
-    }
+  .pricing-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
 
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
-    }
+ 
+  .pricing-card {
+    background: linear-gradient(180deg, #ffffff 90%, #fdf5ed 100%);
+    border: none;
+    border-radius: 20px;
+    width: 270px;
+    height: 300px;
+    padding: 35px 25px;
+    color: #0B1C3D;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+  }
 
-    th {
-      background-color: #f2f2f2;
-    }
+  .pricing-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #d08025;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 
-    .pricing-section {
-      text-align: center;
-      margin-top: 120px;
-    }
+  .pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(208, 128, 37, 0.4);
+  }
 
-    .pricing-section h1 {
-      font-size: 30px;
-      margin-bottom: 40px;
-    }
+  .plan-title {
+    font-weight: 700;
+    font-size: 22px;
+    color: #0B1C3D;
+    margin-top: 10px;
+  }
 
-    .pricing-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+  .plan-price {
+    color: #d08025;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
 
-    .pricing-card {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      width: 230px;
-      padding: 20px;
-      background-color: #f9f9f9;
-    }
+  .features {
+    line-height: 1.8;
+    font-size: 17px;
+    color: #1c1c1c;
+  }
 
-    .plan-title {
-      font-weight: bold;
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
+  .getstart-btn {
+    background-color: #d08025;
+    color: #0B1C3D;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    align-self: center;
+  }
 
-    .plan-price {
-      font-size: 18px;
-      margin-bottom: 15px;
-    }
+  .getstart-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 15px rgba(208, 128, 37, 0.5);
+  }
 
-    .getstart-btn {
-      margin-top: 20px;
-      padding: 8px 15px;
-      border: none;
-      background-color: #496f9a;
-      color: white;
-      border-radius: 6px;
-      
-    }
+  .orange-rings {
+  position: absolute;
+  bottom: -380px;     
+  right: -200px;      
+  width: 500px;
+  height: 500px;
+  background: url("plans_img/circles.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;       
+}
 
-    
-  </style>
+
+</style>
+
 </head>
 <body>
 
-  <toolbar>
-  <nav>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="plans_img/logo.png" alt="TaxASAP Logo" class="logo">
+      </a>
+    </div>
+    <div class="nav-right">
+      <a href="plans.html">Plans</a>
+      <a href="about.html">About</a>
+      <a href="TeamMember.html">Team</a>
+      <a href="customer.html" class="btns">Get Started</a>
+    </div>
   </nav>
-  <a href="Home_page.html" class="logo" style="top:-30px; left:0px;">
-      <img src="main_page_img/TaxASAP_finale_logo-removebg-preview.png" alt="TaxASAP Logo" width="250" height="max-content">
-  </a>
-      <div>
-      <a href="plans.html" class="plans-button" style="left:85%;">
-      <img src="main_page_img/plans-icon.png" alt="see plans offered">
-      <span>Plans</span>
-      </a>
-      <a href="" class="customer-button" style="left:92%;">
-      <img src="main_page_img/costumer-icon.png" alt="costumer page" height="80px">
-      <span>Customer</span>
-      </a>
-      <a href="TeamMember.html" class="team-button"  style="left:78%;">
-      <img src="main_page_img/team-icon.png" alt="meet the team">
-      <span>Team</span>
-      </a>  
-      <a href="about.html" class="about-button"  style="left:70%;">
-      <img src="main_page_img/about-icon.png" alt="about us">
-      <span>About</span>
-      </a>
-      </div>
-</toolbar>
 
   
 <section class = "pricing-section">
@@ -211,6 +256,7 @@
     </div>
 
   </div>
+  <div class="orange-rings"></div>
 </section>
 </body>
 </html>
