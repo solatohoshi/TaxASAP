@@ -17,6 +17,7 @@ var teamMembers = [
         name: 'Loik Bernatchez',
         role: 'Full Stack Developer',
         img: 'https://sg.portal-pokemon.com/play/resources/pokedex/img/pm/83ae6c65e360f0b9bfeb3fcf71de6ceab8d5de66.png',
+        link: 'https://github.com/loik-b',
         info: 'The Frenchie'
     },
     {

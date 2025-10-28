@@ -1,272 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #0B1C3D;
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-
-  
-  .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0B1C3D;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  z-index: 10;
-  padding: 0 40px 0 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35); 
-}
-
-  .nav-left {
-    display: flex;
-    align-items: center;
-  }
-
-  .logo {
-    height: 150px;
-    width: auto;
-    margin-left: 0;
-  }
-
- .nav-right a {
-  color: #f5f5f5;
-  text-decoration: none;
-  font-size: 18.4px;
-  transition: all 0.3s ease;
-  padding: 8px 10px;
-}
-
-.nav-right a:hover {
-  color: #d08025;
-  transform: scale(1.1);
-}
-.nav-right .btns {
-  background-color: #d08025;
-  color: #0B1C3D;
-  padding: 10px 24px;
-  border-radius: 25px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(208, 128, 37, 0.5);
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 45px;
-}
-
-.nav-right .btns:hover {
-  background-color: #f5f5f5;
-  color: #0B1C3D;
-  transform: scale(1.12);
-  box-shadow: 0 0 20px rgba(208, 128, 37, 0.7);
-}
- 
-  .pricing-section {
-    text-align: center;
-    margin-top: 150px;
-    padding-bottom: 100px;
-    background: linear-gradient(180deg, #0B1C3D 0%, #12244d 100%);
-  }
-
-  .pricing-section {
-  text-align: center;
-  margin-top: 150px;
-  padding-bottom: 100px;
-  background: linear-gradient(180deg, #0B1C3D 0%, #12244d 100%);
-  position: relative;   
-  overflow: hidden;    
-  z-index: 1; 
-}
-
-
-
-  .pricing-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-
- 
-  .pricing-card {
-    background: linear-gradient(180deg, #ffffff 90%, #fdf5ed 100%);
-    border: none;
-    border-radius: 20px;
-    width: 270px;
-    height: 300px;
-    padding: 35px 25px;
-    color: #0B1C3D;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-  }
-
-  .pricing-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background-color: #d08025;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-
-  .pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(208, 128, 37, 0.4);
-  }
-
-  .plan-title {
-    font-weight: 700;
-    font-size: 22px;
-    color: #0B1C3D;
-    margin-top: 10px;
-  }
-
-  .plan-price {
-    color: #d08025;
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-
-  .features {
-    line-height: 1.8;
-    font-size: 17px;
-    color: #1c1c1c;
-  }
-
-  .getstart-btn {
-    background-color: #d08025;
-    color: #0B1C3D;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    align-self: center;
-  }
-
-  .getstart-btn:hover {
-    transform: scale(1.07);
-    box-shadow: 0 6px 15px rgba(208, 128, 37, 0.5);
-  }
-
-  .orange-rings {
-  position: absolute;
-  bottom: -380px;     
-  right: -200px;      
-  width: 500px;
-  height: 500px;
-  background: url("plans_img/circles.png") no-repeat center center;
-  background-size: cover;
-  opacity: 0.8;
-  pointer-events: none;
-  z-index: 0;       
-}
-
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans - TaxASAP</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="plans-styles.css">
 </head>
-<body>
+<body data-include-navbar data-include-static-footer>
+    
+    <div class="page-content">
+        <section class="pricing-section">
+            <h1>Pricing</h1>
+            <div class="pricing-container">
 
+                <div class="pricing-card">
+                    <div class="plan-title">Student</div>
+                    <div class="plan-price">$</div>
+                    <div class="features">
+                        <span class="check">✔</span> Basic Filing<br>
+                        <span class="check">✔</span> Email Support<br>
+                        <span class="cross">✖</span> Priority Support<br>
+                        <span class="cross">✖</span> Expert Review
+                    </div>
+                    <button class="getstart-btn">Get Started</button>
+                </div>
 
-  <nav class="navbar">
-    <div class="nav-left">
-      <a href="Home_page.html">
-        <img src="plans_img/logo.png" alt="TaxASAP Logo" class="logo">
-      </a>
+                <div class="pricing-card">
+                    <div class="plan-title">Business</div>
+                    <div class="plan-price">$</div>
+                    <div class="features">
+                        <span class="check">✔</span> Business Filing<br>
+                        <span class="check">✔</span> Expense Tracking<br>
+                        <span class="cross">✖</span> Multi-Entity<br>
+                        <span class="check">✔</span> Dedicated Support
+                    </div>
+                    <button class="getstart-btn">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-title">Individual</div>
+                    <div class="plan-price">$$</div>
+                    <div class="features">
+                        <span class="check">✔</span> Advanced Filing<br>
+                        <span class="check">✔</span> Investment Support<br>
+                        <span class="cross">✖</span> Business Features<br>
+                        <span class="check">✔</span> Expert Review
+                    </div>
+                    <button class="getstart-btn">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-title">Family</div>
+                    <div class="plan-price">$$</div>
+                    <div class="features">
+                        <span class="check">✔</span> Multiple Returns<br>
+                        <span class="check">✔</span> Family Benefits<br>
+                        <span class="check">✔</span> Child Tax Credits<br>
+                        <span class="check">✔</span> Priority Support
+                    </div>
+                    <button class="getstart-btn">Get Started</button>
+                </div>
+
+            </div>
+            <div class="orange-rings"></div>
+        </section>
     </div>
-    <div class="nav-right">
-      <a href="plans.html">Plans</a>
-      <a href="features.html">About</a>
-      <a href="TeamMember.html">Team</a>
-      <a href="customer.html" class="btns">Get Started</a>
-    </div>
-  </nav>
-
-  
-<section class = "pricing-section">
-  <h1>Pricing</h1>
-  <div class="pricing-container">
-
-    <div class="pricing-card">
-      <div class="plan-title">Student</div>
-      <div class="plan-price">$</div>
-      <div class="features">
-        ✔️<br>
-        ✔️<br>
-        ❌<br>
-        ❌
-      </div>
-      <button class="getstart-btn">Get Started</button>
-    </div>
-
-    <div class="pricing-card">
-      <div class="plan-title">Individual</div>
-      <div class="plan-price">$$$</div>
-      <div class="features">
-        ✔️<br>
-        ✔️<br>
-        ❌<br>
-        ✔️
-      </div>
-      <button class="getstart-btn">Get Started</button>
-    </div>
-
-    <div class="pricing-card">
-      <div class="plan-title">Business</div>
-      <div class="plan-price">$$</div>
-      <div class="features">
-        ✔️<br>
-        ✔️<br>
-        ❌<br>
-        ❌
-      </div>
-      <button class="getstart-btn">Get Started</button>
-    </div>
-
-    <div class="pricing-card">
-      <div class="plan-title">Family</div>
-      <div class="plan-price">$$$</div>
-      <div class="features">
-        ✔️<br>
-        ✔️<br>
-        ✔️<br>
-        ✔️
-      </div>
-      <button class="getstart-btn">Get Started</button>
-    </div>
-
-  </div>
-  <div class="orange-rings"></div>
-</section>
+    
+    <script src="shared-components.js"></script>
 </body>
 </html>

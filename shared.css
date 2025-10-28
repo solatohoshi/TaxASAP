@@ -1,0 +1,136 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0B1C3D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 100;
+    padding: 0 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-right a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 18.4px;
+    transition: all 0.3s ease;
+    padding: 8px 10px;
+}
+
+.nav-right a:hover {
+    color: #d08025;
+    transform: scale(1.1);
+}
+
+.nav-right .btns {
+    background-color: #d08025;
+    color: #0B1C3D;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(208, 128, 37, 0.5);
+}
+
+.nav-right .btns:hover {
+    background-color: #f5f5f5;
+    color: #0B1C3D;
+    transform: scale(1.12);
+    box-shadow: 0 0 20px rgba(208, 128, 37, 0.7);
+}
+.scrolling-footer {
+    position: fixed;
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+    background-color: #0B1C3D;
+    color: #f5f5f5;
+    text-align: left;
+    transition: bottom 0.5s ease;
+    z-index: 99;
+    border-top: 4px solid #d08025;
+    padding: 30px 20px;
+}
+
+.scrolling-footer.visible {
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    color: #d08025;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-content p,
+.footer-content ul {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-content a {
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-content a:hover {
+    color: #d08025;
+}
+
+.footer-content li {
+    margin: 10px 0;
+}
+.static-footer {
+    background-color: #0B1C3D;
+    color: #f5f5f5;
+    padding: 40px 20px;
+    border-top: 4px solid #d08025;
+    position: relative;
+    z-index: 10;
+}
+.page-content {
+    padding-top: 90px;
+    min-height: 100vh;
+}
+.container-centered {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}

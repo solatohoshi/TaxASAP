@@ -1,244 +1,40 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <title>TaxASAP Features</title>
-  <style>
-    nav {
-      width: 100%;
-      position: relative;
-      margin: 0;
-      padding: 0;
-      background-color: rgb(98, 116, 176);
-      height: 100px;
-    }
-
-
-    body {
-      position: relative;
-      margin: 0;
-      font-family: 'Times New Roman', Times, serif;
-      background-color: #ebebfc;
-    }
-
-    .logo:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s;
-    }
-
-    .team-button:hover,
-    .customer-button:hover,
-    .plans-button:hover,
-    .about-button:hover {
-      background-color: #20179d;
-      transform: scale(1.05);
-      transition: transform 0.3s;
-
-    }
-
-    .team-button img,
-    .about-button img,
-    .plans-button img,
-    .customer-button img {
-      width: auto;
-      height: 80px;
-      vertical-align: top;
-    }
-
-    .about-button,
-    .customer-button,
-    .logo,
-    .team-button,
-    .plans-button {
-      position: fixed;
-      top: 0px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 16px;
-      border-radius: 8px;
-      z-index: 4;
-    }
-
-    .background_img {
-      height: 680px;
-      background-image: url(about_pics/background.avif);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: #cccccc;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .background_img::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.45);
-    }
-
-    .description {
-      position: relative;
-      text-align: center;
-      color: white;
-      max-width: 800px;
-      padding: 20px;
-    }
-
-    .description p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .description h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-    }
-
-    .companies {
-
-      height: fit-content;
-      text-align: center;
-      padding: 30px;
-    }
-
-    .companies h2 {
-      font-size: 2rem;
-      margin: 20px 0;
-    }
-
-    .img_comps {
-      align-items: center;
-      justify-content: center;
-      display: inline-flex;
-      gap: 30px;
-      animation: slide 20s linear infinite;
-    }
-
-    .img_comps img {
-      height: 50px;
-      width:100%;
-      max-width: 150px;
-      object-fit: contain;
-    }
-
-    @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .why {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      padding: 30px 0;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .why h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin: 20px 0;
-    }
-
-    .reasons {
-      justify-content: center;
-      align-items: center;
-      margin: 20px auto;
-      max-width: 600px;
-    }
-
-    .reasons li {
-      list-style: none;
-      line-height: 2;
-      font-size: larger;
-      justify-content: center;
-    }
-
-    .reasons li::before {
-      content: "✓";
-      color: green;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="utf-8">
+    <title>TaxASAP - About/Features</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="features-styles.css">
 </head>
-
-<toolbar>
-  <nav>
-  </nav>
-  <a href="Home_page.html" class="logo" style="top:-30px; left:0px;">
-    <img src="main_page_img/TaxASAP_finale_logo-removebg-preview.png" alt="TaxASAP Logo" width="250"
-      height="max-content">
-  </a>
-  <div>
-    <a href="plans.html" class="plans-button" style="left:85%;">
-      <img src="main_page_img/plans-icon.png" alt="see plans offered">
-      <span>Plans</span>
-    </a>
-    <a href="" class="customer-button" style="left:92%;">
-      <img src="main_page_img/costumer-icon.png" alt="costumer page" height="80px">
-      <span>Customer</span>
-    </a>
-    <a href="TeamMember.html" class="team-button" style="left:78%;">
-      <img src="main_page_img/team-icon.png" alt="meet the team">
-      <span>Team</span>
-    </a>
-    <a href="about.html" class="about-button" style="left:70%;">
-      <img src="main_page_img/about-icon.png" alt="about us">
-      <span>About</span>
-    </a>
-  </div>
-</toolbar>
-
-<body>
-  <div class=background_img>
-    <div class="description">
-      <h1>File Your Taxes Easier in Canada</h1>
-      <p>At TaxASAP, we know how painful it is to file your own tax in Canada, and we are here to make filing taxes
-        faster
-        and easier for you. It is an application that centers customers' needs and integrates expert insights. If you're
-        looking for an affordable tax filing app that makes your life easier, TaxASAP is the best choice for you! </p>
+<body data-include-navbar data-include-static-footer>
+    <div class="page-content">
+        <div class="background_img">
+            <div class="description">
+                <h1>File Your Taxes Easier in Canada</h1>
+                <p>At TaxASAP, we know how painful it is to file your own tax in Canada, and we are here to make filing taxes faster and easier for you. It is an application that centers customers' needs and integrates expert insights. If you're looking for an affordable tax filing app that makes your life easier, TaxASAP is the best choice for you!</p>
+            </div>
+        </div>
+        <div class="companies">
+            <h2>Trusted By</h2>
+            <div class="img_comps">
+                <img src="https://aptira.com/wp-content/uploads/2013/05/nokia_logo_white.png" alt="Nokia logo">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/ottawa-citizen-1-logo-black-and-white.png" alt="Ottawa Citizen logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" alt="Shopify logo">
+                <img src="https://cdn.prod.website-files.com/5e94a102877c872e8710b7a1/5f5a6dac4408b23234b00f44_uOttawa%20vert%20INV.png" alt="University of Ottawa logo">
+            </div>
+        </div>
+        <div class="why">
+            <h2>Why Choose Us?</h2>
+            <div class="reasons">
+                <ul>
+                    <li>Quick & Easy</li>
+                    <li>Affordable Plans</li>
+                    <li>Personalized Experience</li>
+                    <li>Experts with Years of Experience</li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div class="companies">
-    <div class="img_comps">
-      <img src="about_pics/nokia-3.svg" alt="nokia_logo">
-      <img src="about_pics/ottawa-citizen-2.svg" alt="ottawa-citizen_logo">
-      <img src="about_pics/shopify-2.svg" alt="shopify_logo">
-      <img src="about_pics/uottawa.svg" alt="uottawa_logo">
-    </div>
-  </div>
-
-  <div class="why">
-    <h2>Why Choose Us?</h2>
-    <div class="reasons">
-      <ul>
-        <li>Quick & Easy</li>
-        <li>Affordable Plans</li>
-        <li>Personalized Experience</li>
-        <li>Experts with Years of Experience</li>
-      </ul>
-    </div>
-  </div>
-
+    <script src="shared-components.js"></script>
 </body>
-
 </html>
